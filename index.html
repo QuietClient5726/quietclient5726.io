@@ -2,70 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>QuietClient5725</title>
+
+    <!-- Main styles -->
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
 
-  <body class="relative min-h-screen bg-black text-white overflow-hidden">
-
-    <!-- Ambient glass lighting -->
-    <div class="absolute inset-0 -z-10">
-      <div
-        class="absolute top-[-25%] left-[-25%] w-[65vw] h-[65vw]
-               bg-cyan-500/20 rounded-full blur-[150px]">
-      </div>
-
-      <div
-        class="absolute bottom-[-25%] right-[-25%] w-[65vw] h-[65vw]
-               bg-purple-500/20 rounded-full blur-[150px]">
-      </div>
-    </div>
+  <body>
+    <!-- Background atmosphere -->
+    <div class="background"></div>
 
     <!-- Main content -->
-    <main class="relative z-10 min-h-screen flex justify-center px-6 py-24">
-      <div
-        class="mx-auto text-center p-10 rounded-3xl max-w-xl
-               bg-white/20 backdrop-blur-2xl
-               border border-white/20
-               shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
+    <main>
+  <div class="container">
+    <div class="glass">
+      <h1>QuietClient5725</h1>
 
-        <h1 class="text-5xl font-semibold tracking-tight">
-          QuietClient5725
-        </h1>
+      <p class="subtitle">
+        Student · Developer · Tech
+      </p>
 
-        <p class="mt-3 text-white/70 text-lg">
-          Student · Developer · Tech
-        </p>
+      <p class="description">
+        I build clean, modern web experiences with a focus on design,
+        performance, and clarity.
+      </p>
 
-        <p class="mt-5 text-white/60 leading-relaxed">
-          I build clean, modern web experiences with a focus on design,
-          performance, and clarity.
-        </p>
+      <div class="actions">
+        <a href="#contact">Get in touch</a>
 
-        <div class="flex gap-4 justify-center mt-8">
-          <a
-            class="px-6 py-2.5 rounded-full
-                   bg-white/20 backdrop-blur-md
-                   border border-white/30
-                   hover:bg-white/30 transition"
-            href="#contact">
-            Get in Touch
-          </a>
-
-          <a
-            class="px-6 py-2.5 rounded-full
-                   border border-white/30
-                   text-white/80
-                   hover:text-white transition"
-            href="https://github.com/QuietClient5726"
-            target="_blank">
-            GitHub
-          </a>
-        </div>
-
+        <a
+          class="secondary"
+          href="https://github.com/QuietClient5726"
+          target="_blank"
+          rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
-    </main>
-
-    <script type="module" src="/src/main.js"></script>
+    </div>
+  </div>
+</main>
   </body>
 </html>
