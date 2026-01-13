@@ -22,7 +22,6 @@ body {
 ================================ */
 :root {
   --accent: #ff8a00;
-  --accent-soft: rgba(255, 138, 0, 0.18);
   --glass-border: rgba(255, 255, 255, 0.14);
   --text-muted: rgba(255, 255, 255, 0.65);
 }
@@ -34,7 +33,6 @@ body {
   position: fixed;
   inset: 0;
   z-index: -2;
-  overflow: hidden;
 }
 
 .background::before,
@@ -78,7 +76,8 @@ main {
    Glass Card
 ================================ */
 .glass {
-  max-width: 720px;
+  max-width: 760px;
+  padding: 3.5rem;
 
   background: linear-gradient(
     180deg,
@@ -91,7 +90,6 @@ main {
 
   border: 1px solid var(--glass-border);
   border-radius: 24px;
-  padding: 3.5rem 3.5rem;
 
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.55),
@@ -116,9 +114,8 @@ h1 {
 }
 
 .description {
-  margin-top: 2rem;
-  max-width: 520px;
-  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  font-size: 1.15rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -127,7 +124,7 @@ h1 {
    Actions
 ================================ */
 .actions {
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
   display: flex;
   gap: 2rem;
 }
@@ -169,6 +166,57 @@ h1 {
 }
 
 /* ================================
+   Divider
+================================ */
+.divider {
+  margin: 3rem 0;
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ================================
+   Sections
+================================ */
+.about h2,
+.projects h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.about p {
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about p + p {
+  margin-top: 1rem;
+}
+
+/* ================================
+   Projects
+================================ */
+.project {
+  margin-bottom: 1.5rem;
+}
+
+.project h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.project p {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 640px;
+}
+
+/* ================================
    Animations
 ================================ */
 @keyframes fadeUp {
@@ -183,22 +231,14 @@ h1 {
 }
 
 /* ================================
-   Contact Page
+   Responsive
 ================================ */
-.contact-card {
-  max-width: 640px;
-}
+@media (max-width: 768px) {
+  main {
+    padding: 4rem 2rem;
+  }
 
-.contact-list {
-  margin-top: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  .glass {
+    padding: 2.5rem 2rem;
+  }
 }
-
-.contact-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid
